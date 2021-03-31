@@ -1,0 +1,37 @@
+<label>
+  Main Groups
+  <input [(ngModel)]="groups" type="number" />
+</label>
+
+<label>
+  Nested levels each Group
+  <input [(ngModel)]="levels" type="number" />
+</label>
+
+
+<label>
+  Components each lowest level
+  <input [(ngModel)]="components" type="number" />
+</label>
+
+<br>
+<button (click)="emit()">update</button>
+
+<br>
+<br>
+<label>
+  <input type="checkbox" (click)="toggleInterval()" />
+  Run 6s Interval
+</label>
+
+<br>
+
+
+<br>
+<br>
+<p>
+  Open the dev console (F11) and type <span style="font-family: monospace">ng.profiler.timeChangeDetection({{'{'}}}
+    record: true {{'}'}}
+    )</span>. Execute to see change detection cycle the profile result.
+</p>
+<hr>

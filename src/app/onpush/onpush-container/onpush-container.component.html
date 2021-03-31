@@ -1,0 +1,6 @@
+<h1>OnPush</h1>
+
+<app-controls (config)="updateConfig($event)"></app-controls>
+
+<app-onpush *ngFor="let config of testConfigs" [object]="config.boundObject" [config]="config"
+             [value]="config.boundValue"></app-onpush>

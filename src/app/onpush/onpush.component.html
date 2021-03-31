@@ -1,0 +1,16 @@
+<p>Bound Value: {{value}}</p>
+<p>Bound Object: {{object | json}}</p>
+<label> Some Input
+  <input [(ngModel)]="inputValue" > Bound value: "{{inputValue}}"
+</label>
+<br>
+<label>
+  Some Other Input
+  <input #input> Template referenced value: "{{input.value}}"
+</label>
+<ng-container *ngIf="config.highlight">{{markCdCycle()}}</ng-container>
+
+<app-onpush *ngFor="let child of config.children"
+             [config]="child"
+             [value]="child.boundValue"
+             [object]="child.boundObject"></app-onpush>
